@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Create Account</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+
+		<header>
+            <!--Para la realización de este ejercicio se han consultado además de los propios apuntes facilitados por la 
+            plataforma de estudio, canales de YouTube como FalconMasters y AlexCG Design.-->
+		</header>
+		
+        <div id="registro"> <!--Registro-->
+            <form action="procesar-datos.php" method="post" class="formulario" id="formulario">
+                <h1>Create Account</h1>
+                <br>
+                <!--Nombre-->
+                <div class="formulario_grupo" id="grupo_nombre">
+                <label for="nombre" class="formulario_label">Nombre</label>
+                    <div class="formulario_grupo_input">
+                        <input class="formulario_input" type="text" id="nombre" name="nombre" required="required" placeholder="Nombre"/>
+                        <img src="ima_genes\error-icon.svg" id="formulario_mal" alt="error" class="formulario_validacion_estado_mal" >
+                        <img src="ima_genes\success-icon.svg" id="formulario_bien" alt="bueno" class="formulario_validacion_estado_bien">
+                    </div>
+                    <p class="formulario_input_error">Solo letras</p>
+                    <p class="formulario_input_vacio">Rellene este campo</p>
+                </div>
+                <br>
+                <!--Email-->
+                <div class="formulario_grupo" id="grupo_email">
+                    <label for="email" class="formulario_label">Email</label>
+                        <div class="formulario_grupo_input">
+                            <input class="formulario_input" type="email" id="email" name="email" required="required" placeholder="Email"/>
+                            <img src="ima_genes\error-icon.svg" id="formulario_mal" alt="error" class="formulario_validacion_estado_mal" >
+                            <img src="ima_genes\success-icon.svg" id="formulario_bien" alt="bueno" class="formulario_validacion_estado_bien">
+                        </div>
+                    <p class="formulario_input_error">Email inválido</p>
+                    <p class="formulario_input_vacio">Rellene este campo</p>
+                </div>
+                <br>
+                <!--Clave-->
+                <div class="formulario_grupo" id="grupo_clave">
+                    <label for="clave" class="formulario_label">Contraseña</label>
+                        <div class="formulario_grupo_input">
+                            <input class="formulario_input" type="password" id="clave" name="clave" required="required" placeholder="Mínimo 8 caracteres"/>
+                            <img src="ima_genes\error-icon.svg" id="formulario_mal" alt="error" class="formulario_validacion_estado_mal" >
+                            <img src="ima_genes\success-icon.svg" id="formulario_bien" alt="bueno" class="formulario_validacion_estado_bien">
+                        </div>
+                    <p class="formulario_input_error">Al menos 8 letras y 1 mayúscula</p>
+                    <p class="formulario_input_vacio">Rellene este campo</p>
+                </div>
+                <br>
+                  <!--Confirmar clave-->
+                  <div class="formulario_grupo" id="grupo_confirmarClave">
+                    <label for="confirmarClave" class="formulario_label">Confirmar la contraseña</label>
+                        <div class="formulario_grupo_input">
+                            <input class="formulario_input" type="password" id="confirmarClave" name="confirmarClave" required="required" placeholder="Confirmar la contraseña"/>
+                            <img src="ima_genes\error-icon.svg" id="formulario_mal" alt="error" class="formulario_validacion_estado_mal" >
+                            <img src="ima_genes\success-icon.svg" id="formulario_bien" alt="bueno" class="formulario_validacion_estado_bien">
+                        </div>
+                    <p class="formulario_input_error">La contraseña no coincide</p>
+                    <p class="formulario_input_vacio">Rellene este campo</p>
+                </div>
+                <br>
+                <div class="formulario_grupo formulario_grupo_enviar">
+                    <input id="enviar" type="submit" name="enviar" value="ENVIAR"/>
+                    <p class="formulario_mensaje_exito" id="formulario_mensaje_exito">Se ha registrado correctamente.</p>
+                </div>
+            </form>
+        </div>
+
+		<footer>
+			Samsung DesArrolladoras 2023
+		</footer>	
+        <script src="index.js"></script>
+	</body>
+</html>
